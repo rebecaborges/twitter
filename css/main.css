@@ -1,6 +1,8 @@
 body{
     margin:0;
+    background-color: #e6ecf0;
 }
+
 
 .top{
     background-color: #1da1f2;
@@ -26,9 +28,13 @@ body{
 }
 
 #message{
+    font-family: 'Segoe UI', Arial, Helvetica;
+    font-size: 17px;
     margin: 70px 0px 20px;
     padding: 60px 120px 60px; 
-    border-radius: 8px;
+    border-radius:8px;
+    border:solid #A4D9F9;
+    color:#1da1f2 ;
 
 }
 
@@ -44,19 +50,23 @@ body{
     justify-content: center;
     padding-left: 354px;    
     display: fixed;
+    font-size: 20px;
+    font-family: 'Segoe UI', Arial, Helvetica;
 }
 
 .boxShowMessage{
     display: flex;
-    justify-content: center;
-
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  
 }
 
 #showMessage {
-    margin: 10px 0px 0px;
+    margin: 0px 0px 0px;
     padding: 40px 260px 35px; 
-    border-radius: 8px;
-    font-size: 18px;
-    
+    font-size: 25px;
+    color:#1da1f2 ;
+    font-family: 'Segoe UI', Arial, Helvetica;
 }
 

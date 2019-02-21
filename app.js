@@ -4,8 +4,6 @@ let button = document.getElementById('buttonTweet')
 let counter = document.getElementById('counter');
 
 
-
-
 function eventText (evt){
     saveShowMessage.innerHTML=saveMessage.value
     evt.preventDefault()
@@ -37,7 +35,6 @@ function evtButton(evt){
 saveMessage.addEventListener('keyup', evtButton)
 
 
-
 function sumCaracter(saveMessage){
     let max = 140;
     let msg = saveMessage.value.length
@@ -56,4 +53,11 @@ function showCaracter (evt){
     buttonDisabled(button)
     evt.preventDefault()
 }
-saveMessage.addEventListener('keyup', showCaracter)
+saveMessage.addEventListener('keyup', showCaracter, colorCounter)
+
+
+function colorCounter(counter){
+    if (counter <= 120){
+        counter.style.color='red';
+    }
+}
