@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Twitter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" src="main.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
     
 </head>
 <body>
-    <header></header>
+    <header class='top'>TWITTER</header>
     <main>
-        <form>
-            <input id='message' placeholder="Digite sua mensagem">
+        <form class='boxTweet'>
+            <textarea id='message' placeholder="O que está acontecendo ?    "></textarea>
             <input id='buttonTweet' type="submit" value='TWEET'></input>
         </form>
-        <h2 id='showMessage'>sua mensagem aqui</h2>
+        <p id='counter'></p>
+        <p id='showMessage'>sua mensagem aqui</p>
     </main>
     <script src="app.js"></script>
 </body>

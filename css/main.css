@@ -1,3 +1,40 @@
-main{
-    background-color: blue;
+body{
+    margin:0;
+}
+
+.top{
+    background-color: #1da1f2;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    color: white;
+    justify-content: center;
+}
+
+#message{
+    margin: 20px;
+    padding: 60px 120px 60px; 
+}
+
+#buttonTweet{
+    padding: 10px 18px 10px;
+    border-radius: 5px;
+    margin-right: 315px;
+}
+
+.boxTweet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#counter{
+    display: flex;
+    justify-content: center;
+    padding-left: 354px;    
+}
+
+#showMessage{
+    display: flex;
+    justify-content: center;
 }
