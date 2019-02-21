@@ -6,17 +6,27 @@
     <title>Twitter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     
 </head>
 <body>
-    <header class='top'>TWITTER</header>
+    <header class='top'>
+        TWITTER
+        <i class="fab fa-twitter"></i>
+    </header>
     <main>
         <form class='boxTweet'>
-            <textarea id='message' placeholder="O que está acontecendo ?    "></textarea>
-            <input id='buttonTweet' type="submit" value='TWEET'></input>
+            <textarea id='message' placeholder="O que está acontecendo ?"></textarea>
+            <input disabled='disabled' id='buttonTweet' type="submit" value='TWEET'></input>
         </form>
-        <p id='counter'></p>
-        <p id='showMessage'>sua mensagem aqui</p>
+        <section>
+            <p id='counter'>140</p>
+        </section>
+        <article class='boxShowMessage'>
+            <p id='showMessage'></p>
+            <p></p>
+        </article>
+        
     </main>
     <script src="app.js"></script>
 </body>

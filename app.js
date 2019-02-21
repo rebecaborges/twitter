@@ -3,33 +3,48 @@ let saveShowMessage = document.getElementById('showMessage');
 let button = document.getElementById('buttonTweet')
 let counter = document.getElementById('counter');
 
-function showText(evt){
-    saveShowMessage.innerHTML=saveMessage.value;
 
+
+
+function eventText (evt){
+    saveShowMessage.innerHTML=saveMessage.value
     evt.preventDefault()
 }
 
-button.addEventListener('click', showText)
+button.addEventListener('click', eventText)
 
 
-// function enableButton (evt){
-//     if(saveMessage ===''){
-//     button.disabled=true
-//     }else{button.disabled=false}  
+function clearContent(evt){
+    saveMessage.value=''
+    evt.preventDefault
+}
+button.addEventListener('click', clearContent)
 
-//     evt.preventDefault();
 
-// }
-// saveMessage.addEventListener('click', enableButton)
+function buttonDisabled(saveMessage){
+    if(saveMessage===''){
+        button.disabled=true;
+    }else{
+        button.disabled=false;
+    }
+}
+
+function evtButton(evt){
+    button.disabled=false;
+    evt.preventDefault()
+}
+
+saveMessage.addEventListener('keyup', evtButton)
+
+
 
 function sumCaracter(saveMessage){
     let max = 140;
     let msg = saveMessage.value.length
     let total = max-msg
 
-    if(total < 0){
+    if(total < 0 || msg===''){
         button.disabled=true;   
-           console.log(button)
     }else{
         button.disabled=false;
     }
@@ -38,6 +53,7 @@ function sumCaracter(saveMessage){
 
 function showCaracter (evt){
     sumCaracter(saveMessage)
+    buttonDisabled(button)
     evt.preventDefault()
 }
 saveMessage.addEventListener('keyup', showCaracter)
