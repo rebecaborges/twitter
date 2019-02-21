@@ -1,23 +1,22 @@
 let saveMessage = document.getElementById('message');
 let saveShowMessage = document.getElementById('showMessage');
-let button = document.getElementById('buttonTweet')
+let button = document.getElementById('buttonTweet');
 let counter = document.getElementById('counter');
 
+button.addEventListener('click', createTag)
 
-function eventText (evt){
-    saveShowMessage.innerHTML=saveMessage.value
-    evt.preventDefault()
-}
+function createTag(e){
+    let paragraph = document.createElement('p');
+    let p =saveShowMessage.appendChild(paragraph);
+    let value = document.getElementById('message').value;
+    paragraph.innerHTML= value;
 
-button.addEventListener('click', eventText)
+    console.log(value)
 
-
-function clearContent(evt){
     saveMessage.value=''
-    evt.preventDefault
+    e.preventDefault()
+    
 }
-button.addEventListener('click', clearContent)
-
 
 function buttonDisabled(saveMessage){
     if(saveMessage===''){
@@ -53,11 +52,16 @@ function showCaracter (evt){
     buttonDisabled(button)
     evt.preventDefault()
 }
-saveMessage.addEventListener('keyup', showCaracter, colorCounter)
+saveMessage.addEventListener('keyup', showCaracter, evtColorCounter)
 
 
 function colorCounter(counter){
-    if (counter <= 120){
-        counter.style.color='red';
+    if (counter < 120){
+       counter.style.color='red';
     }
+}
+
+function evtColorCounter(evt){
+    colorCounter(counter)
+    evt.preventDefault();
 }
